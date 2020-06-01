@@ -2,6 +2,7 @@
 
 #include <set>
 #include <algorithm>
+#include <iostream>
 
 #include "ID.h"
 
@@ -11,7 +12,8 @@ private:
 	std::set<ECS::ID> listID;
 
 public :
-	ECS::ID getID();
-		
+	ECS::ID create();
+	void print();
+	void remove(ECS::ID ent);
 };
 

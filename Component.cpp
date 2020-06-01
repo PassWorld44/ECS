@@ -1,11 +1,12 @@
 #include "Component.h"
 
-Component::Component()
+Component::Component(ECS::ID entity_g) : entity(entity_g)
 {
 }
 
-ECS::ID Component::entity()
+ECS::ID Component::get_entity()
 //just a getter
 {
 	return this->entity;
 }
+
