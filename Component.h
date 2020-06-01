@@ -7,8 +7,18 @@ class Component
 private :
 	ECS::ID entity;
 protected :
-	Component(); //disable cration of component in the base class
+	Component(ECS::ID entity); //disable cration of component in the base class
 public:
-	ECS::ID entity(); //get entity
+	ECS::ID get_entity(); //get entity
+};
+
+struct PositionComponent : public Component {
+    int x{};
+    int y{};
+};
+
+struct StateComponent : public Component {
+    enum class State { Waiting, Walking, Running, Dead };
+    State state{ State::Waiting };
 };
 
